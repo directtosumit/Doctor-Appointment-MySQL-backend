@@ -11,6 +11,30 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// --- REQUEST TIMING & LOGGING MIDDLEWARE ---
+app.use((req, res, next) => {
+  const startTime = process.hrtime(); // High-resolution real-time clock
+
+  console.log(`[START] ${req.method} ${req.originalUrl}`);
+
+  // Listen for the response to finish
+  res.on("finish", () => {
+    const diff = process.hrtime(startTime);
+    const totalNanoSeconds = diff[0] * 1e9 + diff[1];
+
+    const totalMs = totalNanoSeconds / 1e6;
+    const minutes = Math.floor(totalMs / 60000);
+    const seconds = Math.floor((totalMs % 60000) / 1000);
+    const milliseconds = (totalMs % 1000).toFixed(2);
+
+    console.log(
+      `[END] ${req.method} ${req.originalUrl} | Status: ${res.statusCode} | Time took: ${minutes}m ${seconds}s ${milliseconds}ms`,
+    );
+  });
+
+  next();
+});
+
 // MySQL Connection Pool
 const pool = require("./dbConnection");
 
