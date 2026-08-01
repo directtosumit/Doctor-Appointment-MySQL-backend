@@ -9,7 +9,7 @@
       "name": "Auth",
       "item": [
         {
-          "name": "Login User",
+          "name": "Login Doctor User",
           "request": {
             "method": "POST",
             "header": [
@@ -20,7 +20,30 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"email\": \"doctor@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"doctor\"\n}"
+              "raw": "{\n  \"email\": \"doctor1@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"doctor\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/auth/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "auth", "login"]
+            }
+          }
+        },
+        {
+          "name": "Login Patient User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"patient1@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"patient\"\n}"
             },
             "url": {
               "raw": "http://localhost:5000/api/auth/login",
@@ -157,7 +180,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"\",\n  \"specialization\": \"\",\n  \"date\": \"2026-06-15\",\n  \"page\": 1,\n  \"limit\": 30\n}"
+              "raw": "{\n  \"name\": \"23\",\n  \"specialization\": \"\",\n  \"date\": \"\",\n  \"page\": 1,\n  \"limit\": 30\n}"
             },
             "url": {
               "raw": "http://localhost:5000/api/doctors/search",
