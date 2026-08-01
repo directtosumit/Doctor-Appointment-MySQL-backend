@@ -1,6 +1,6 @@
 
 
-```markdown
+
 # Appointment System - Backend Server
 
 A robust Node.js and Express backend API for the Doctor Appointment System, featuring MySQL database integration[cite: 1, 3, 4], JWT-based authentication[cite: 2], request duration logging middleware, and Postman collection support.
