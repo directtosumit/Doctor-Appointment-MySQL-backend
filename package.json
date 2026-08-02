@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "openPort": "adb reverse tcp:5000 tcp:5000",
+    "openPort": "adb reverse tcp:3306 tcp:3306",
     "start": "concurrently \"npm run openPort\" \"node server.js\"",
     "dev": "concurrently \"npm run openPort\" \"nodemon server.js\"",
     "seed": "node seed.js"
