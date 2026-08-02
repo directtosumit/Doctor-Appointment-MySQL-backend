@@ -9,7 +9,7 @@ async function initializeDatabase() {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT || 5000,
+    port: process.env.DB_PORT,
     multipleStatements: true, // Required to run multiple SQL queries at once
   });
 
@@ -17,7 +17,10 @@ async function initializeDatabase() {
     // 2. Read and execute the schema.sql file automatically
     const schemaPath = path.join(__dirname, "database/schema.sql");
     if (fs.existsSync(schemaPath)) {
-      const schemaSql = fs.readFileSync(schemaPath, "utf8");
+      let schemaSql = fs.readFileSync(schemaPath, "utf8");
+      // Replace a placeholder like {{DB_NAME}} with your environment variable
+      if (process.env.DB_NAME)
+        schemaSql = schemaSql.replace("appointment_db", process.env.DB_NAME);
       await connection.query(schemaSql);
       console.log("Database and tables verified/created successfully.");
     }

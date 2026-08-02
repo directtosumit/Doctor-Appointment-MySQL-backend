@@ -34,7 +34,7 @@ A robust Node.js and Express backend API for the Doctor Appointment System, feat
 
 Make sure you have the following installed on your local machine:
 * **Node.js** (v18 or higher recommended)
-* **MySQL Server** (Running locally on port 5000)
+* **MySQL Server** (Running locally on port 3306)
 
 ---
 
@@ -61,13 +61,13 @@ npm install
 Create a file named **`.env`** in the root of the `appointment-backend` folder and add the following configuration variables:
 
 ```env
-DB_HOST=127.0.0.1
+DB_HOST=localhost
 DB_USER=app_user
 DB_PASSWORD=your_password
 DB_NAME=appointment_db
-DB_PORT=5000
-JWT_SECRET=super_secret_key_123
+DB_PORT=3306
 PORT=5000
+JWT_SECRET=super_secret_key_123
 
 ```
 
