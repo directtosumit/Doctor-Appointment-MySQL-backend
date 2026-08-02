@@ -44,7 +44,7 @@ Make sure you have the following installed on your local machine:
    ```bash
    cd appointment-backend
 
-```
+
 
 2. **Install project dependencies:**
 ```bash
