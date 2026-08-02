@@ -23,10 +23,10 @@
               "raw": "{\n  \"email\": \"doctor1@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"doctor\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3306/api/auth/login",
+              "raw": "http://localhost:5000/api/auth/login",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3306",
+              "port": "5000",
               "path": ["api", "auth", "login"]
             }
           }
@@ -46,10 +46,10 @@
               "raw": "{\n  \"email\": \"patient1@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"patient\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3306/api/auth/login",
+              "raw": "http://localhost:5000/api/auth/login",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3306",
+              "port": "5000",
               "path": ["api", "auth", "login"]
             }
           }
@@ -65,10 +65,10 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3306/api/auth/verify",
+              "raw": "http://localhost:5000/api/auth/verify",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3306",
+              "port": "5000",
               "path": ["api", "auth", "verify"]
             }
           }
@@ -97,10 +97,10 @@
               "raw": "{\n  \"date\": \"2026-06-15\",\n  \"start_time\": \"10:00:00\",\n  \"end_time\": \"11:00:00\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3306/api/doctor/availability/add",
+              "raw": "http://localhost:5000/api/doctor/availability/add",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3306",
+              "port": "5000",
               "path": ["api", "doctor", "availability", "add"]
             }
           }
@@ -124,10 +124,10 @@
               "raw": "{\n  \"slotId\": 1\n}"
             },
             "url": {
-              "raw": "http://localhost:3306/api/doctor/availability/remove",
+              "raw": "http://localhost:5000/api/doctor/availability/remove",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3306",
+              "port": "5000",
               "path": ["api", "doctor", "availability", "remove"]
             }
           }
@@ -151,10 +151,10 @@
               "raw": "{\n  \"page\": 1,\n  \"limit\": 30\n}"
             },
             "url": {
-              "raw": "http://localhost:3306/api/doctor/appointments/view",
+              "raw": "http://localhost:5000/api/doctor/appointments/view",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3306",
+              "port": "5000",
               "path": ["api", "doctor", "appointments", "view"]
             }
           }
@@ -183,10 +183,10 @@
               "raw": "{\n  \"name\": \"23\",\n  \"specialization\": \"\",\n  \"date\": \"\",\n  \"page\": 1,\n  \"limit\": 30\n}"
             },
             "url": {
-              "raw": "http://localhost:3306/api/doctors/search",
+              "raw": "http://localhost:5000/api/doctors/search",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3306",
+              "port": "5000",
               "path": ["api", "doctors", "search"]
             }
           }
@@ -210,10 +210,10 @@
               "raw": "{\n  \"id\": 1\n}"
             },
             "url": {
-              "raw": "http://localhost:3306/api/doctors/view",
+              "raw": "http://localhost:5000/api/doctors/view",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3306",
+              "port": "5000",
               "path": ["api", "doctors", "view"]
             }
           }
@@ -237,10 +237,10 @@
               "raw": "{\n  \"doctor_id\": 1,\n  \"slot_id\": 1,\n  \"appointment_date\": \"2026-06-15\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3306/api/appointments",
+              "raw": "http://localhost:5000/api/appointments",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3306",
+              "port": "5000",
               "path": ["api", "appointments"]
             }
           }
@@ -260,10 +260,10 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3306/api/patient/appointments/view",
+              "raw": "http://localhost:5000/api/patient/appointments/view",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3306",
+              "port": "5000",
               "path": ["api", "patient", "appointments", "view"]
             }
           }
