@@ -18,6 +18,10 @@ A robust Node.js and Express backend API for the Doctor Appointment System, feat
 
 ---
 
+## 📺 Demo Video
+A complete walkthrough and screen recording of the application features can be viewed here:
+> [🔗 Watch Project Demo on Google Drive](https://drive.google.com/file/d/16WablPChhj7E2m06umJ4IyEeQRJR3dKY/view)
+
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
 2. [Project Setup Steps](#project-setup-steps)
