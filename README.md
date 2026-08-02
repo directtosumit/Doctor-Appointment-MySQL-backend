@@ -3,7 +3,18 @@
 
 # Appointment System - Backend Server
 
-A robust Node.js and Express backend API for the Doctor Appointment System, featuring MySQL database integration[cite: 1, 3, 4], JWT-based authentication[cite: 2], request duration logging middleware, and Postman collection support.
+A robust Node.js and Express backend API for the Doctor Appointment System, featuring MySQL database integration, JWT-based authentication, request duration logging middleware, and Postman collection support.
+
+
+## Key Features of the Backend Server
+
+* **MySQL Database Integration**: Connects seamlessly with MySQL to manage structured data for doctors, patients, availability slots, and appointments.
+* **JWT-Based Authentication**: Secure login mechanism that issues a JSON Web Token (JWT) upon successful authentication.
+* **Role-Based Authorization & Protected Routes**: Subsequent API requests require the JWT token passed via headers (`Authorization: Bearer <token>`). Middleware verifies the token, user ID, and role to ensure users only access the data and endpoints permitted for their specific profile.
+* **Doctor Management API**: Enables doctors to securely add/remove availability slots and view their scheduled patient appointments.
+* **Patient Management & Booking API**: Allows patients to search for doctors, view slot details, book appointments, and check their personal appointment history.
+* **Request Logging Middleware**: Tracks and records request durations and metadata for robust debugging and monitoring.
+* **Postman Collection Support**: Includes a ready-to-import Postman collection (`postman/Appointment_System.postman_collection.json`) to easily test all endpoints.
 
 ---
 
