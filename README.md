@@ -143,7 +143,7 @@ The server will start listening on port `5000`.
    `postman/Appointment_System.postman_collection.json`
 2. Open **Postman**, click **Import**, and upload the JSON file.
 3. Test endpoints sequentially:
-* Run **Login User** using the credentials above to acquire your JWT token.
+* Run **Signup User** and **Login User** to acquire your JWT token.
 * Copy the returned token and paste it into the `Authorization: Bearer <your_token>` header for protected routes.
 
 
