@@ -1,0 +1,40 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: appointment_mysql_container
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpassword}
+      MYSQL_DATABASE: ${DB_NAME:-appointment_db}
+      MYSQL_USER: ${DB_USER:-app_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-your_password}
+    ports:
+      - "${DB_PORT:-3306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: always
+
+  app:
+    build: .
+    container_name: appointment_backend_container
+    ports:
+      - "${PORT:-5000}:${PORT:-5000}"
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - PORT=${PORT:-5000}
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: always
+
+volumes:
+  mysql_data:
