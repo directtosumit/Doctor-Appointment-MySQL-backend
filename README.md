@@ -78,19 +78,7 @@ You can run the backend server either **locally on your host machine** or **cont
 
 Docker handles the MySQL database setup and environment configuration automatically without requiring a native MySQL installation on your host system.
 
-1. Create a `.env` file in the root of your project directory and configure your credentials (matching your desired database name, user, password, and ports):
-```env
-DB_HOST=db
-DB_USER=app_user
-DB_PASSWORD=your_password
-DB_NAME=appointment_db
-DB_PORT=3306
-PORT=5000
-
-```
-
-
-2. Start the application and database containers in the background using Docker Compose:
+Start the application and database containers in the background using Docker Compose:
 ```bash
 docker compose up --build -d
 
