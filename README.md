@@ -35,7 +35,8 @@ A complete walkthrough and screen recording of the application features can be v
 
 Make sure you have the following installed on your local machine:
 * **Node.js** (v18 or higher recommended)
-* **MySQL Server** (Running locally on port 3306)
+* **Docker & Docker Compose** (Recommended: Required for containerized execution)
+* **MySQL Server** (Alternative: Running locally on port 3306 if not using Docker)
 
 ---
 
